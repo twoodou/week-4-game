@@ -1,0 +1,23 @@
+body {
+	background-image: url("../images/background-fixed.jpg");
+}
+
+.mainHeader {
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.portrait {
+	/*justify-content: center;*/
+	/*border: 1px black solid;*/
+	margin: 0 auto;
+	float: left;
+
+}
+
+.row {
+	/*border: 1px black solid;*/
+}

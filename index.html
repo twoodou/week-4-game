@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>South Park RPG Game</title>
+	<meta charset="utf-8">
+
+	<!-- Reset -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- Style CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+
+
+</head>
+<body>
+
+<!-- Set up main bootstrap grid -->
+	<div class="container">
+
+<!-- First row, main page header -->
+		<div class="row">
+			<div class="col-md-12 mainHeader center">
+				<br>
+				<br>
+				<br>
+				<h1>South Park RPG!</h1>
+			</div>
+		</div>
+
+<!-- Second row, "choose your character" -->
+		<div class="row">
+			<div class="col-md-12 center">
+				<h2 class="dynamicCharHeader">Choose your character!</h2>
+			</div>
+		</div>
+
+<!-- Placeholder row for user's pick -->
+		<div class=" center-block userPickPortrait"></div>
+
+<!-- Third row, character portraits -->
+		<div class="row">
+
+			<!-- Cartman -->
+			<div id="cartman startingPortrait" class="cartman col-sm-3 portrait" value="Cartman">
+				<img class="center-block" src="assets/images/Cop-cartman.png" height="150px">
+				<button class="cartman-button center-block startButton btn btn-primary" value="Cartman">Cartman</button>
+				<h5 class="center hp cartmanHP"></h5>
+			</div>
+
+			<!-- Kenny -->
+			<div id="kenny startingPortrait" class="kenny col-sm-3 portrait" value="Kenny">
+				<img class="center-block" src="assets/images/kenny.jpg" height="150px">
+				<button class="center-block startButton btn btn-primary" value="Kenny">Kenny</button>
+				<h5 class="center hp kennyHP"></h5>
+			</div>
+
+			<!-- Butters -->
+			<div id="butters startingPortrait" class="butters col-sm-3 portrait" value="Butters">
+				<img class="center-block" src="assets/images/butters.png" height="150px">
+				<button class="center-block startButton btn btn-primary" value="Butters">Butters</button>
+				<h5 class="center hp buttersHP"></h5>
+			</div>
+
+			<!-- Tweek -->
+			<div id="tweek startingPortrait" class="tweek col-sm-3 portrait" value="Tweek">
+				<img class="center-block" src="assets/images/tweek.png" height="150px">
+				<button class="center-block startButton btn btn-primary" value="Tweek">Tweek</button>
+				<h5 class="center hp tweekHP"></h5>
+			</div>
+		</div>
+
+		<div class="player">
+
+		</div>
+
+		<!-- Fourth row, character descriptions -->
+<!-- 		<div class="row center">
+			<div class="col-md-3">
+				<h4>Cartman</h4>
+			</div>
+			<div class="col-md-3">
+				<h4>Kenny</h4>
+			</div>
+			<div class="col-md-3">
+				<h4>Butters</h4>
+			</div>
+			<div class="col-md-3">
+				<h4>Tweek</h4>
+			</div>
+		</div> -->
+	</div>
+
+
+
+  	<!-- game.js -->
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+  <!-- <script type="text/javascript">
+
+  		var gameStarted = false;
+  		var cartmanHP = 100;
+		var kennyHP = 100;
+		var buttersHP = 100;
+		var tweekHP = 100;
+
+		var userCharPick;
+
+		// var audioElement = document.createElement("audio");
+	 //    audioElement.setAttribute("src", "Assets/captainplanet24.mp3");
+
+	    // Game start - click function for portraits
+		
+
+		$(".startButton").on("click", function() {
+
+			if (gameStarted === false) {
+				userCharPick = this.value;
+				gameStarted = true;
+
+
+
+			}
+			
+			userCharPick = this.value;
+			console.log("asdaswd");
+		});
+
+
+  </script> -->
+
+</body>
+</html>
