@@ -16,7 +16,6 @@ var userCharPick;
 var numberOfAttacks = 0;
 var attackDamage = Math.floor(Math.random() * 10);
 var attackBackDamage;
-var userDamageModifier = 14;
 
 // var audioElement = document.createElement("audio");
 //    audioElement.setAttribute("src", "Assets/captainplanet24.mp3");
@@ -101,10 +100,9 @@ $(".startButton").on("click", function() {
 	};
 
 	$(".attackKenny").on("click", function() {
-		userDamageModifier++;
 		kennyNewHP = parseInt(kHP) - attackDamage + "%";
 		kHP = document.getElementById("kennyBar").style.width = kennyNewHP;
-		attackDamage = Math.floor(Math.random() * userDamageModifier);
+		attackDamage = Math.floor(Math.random() * 20);
 		attackBack();
 		updateCharacterHealthBars();
 
@@ -117,10 +115,9 @@ $(".startButton").on("click", function() {
 	});
 
 	$(".attackButters").on("click", function() {
-		userDamageModifier++;
 		buttersNewHP = parseInt(bHP) - attackDamage + "%";
 		bHP = document.getElementById("buttersBar").style.width = buttersNewHP;
-		attackDamage = Math.floor(Math.random() * userDamageModifier);
+		attackDamage = Math.floor(Math.random() * 20);
 		attackBack();
 		updateCharacterHealthBars();
 
@@ -133,10 +130,9 @@ $(".startButton").on("click", function() {
 	});
 
 	$(".attackTweek").on("click", function() {
-		userDamageModifier++;
 		tweekNewHP = parseInt(tHP) - attackDamage + "%";
 		tHP = document.getElementById("tweekBar").style.width = tweekNewHP;
-		attackDamage = Math.floor(Math.random() * userDamageModifier);
+		attackDamage = Math.floor(Math.random() * 20);
 		attackBack();
 		updateCharacterHealthBars();
 
@@ -149,10 +145,9 @@ $(".startButton").on("click", function() {
 	});
 
 	$(".attackCartman").on("click", function() {
-		userDamageModifier++;
 		cartmanNewHP = parseInt(cHP) - attackDamage + "%";
 		cHP = document.getElementById("cartmanBar").style.width = cartmanNewHP;
-		attackDamage = Math.floor(Math.random() * userDamageModifier);
+		attackDamage = Math.floor(Math.random() * 20);
 		attackBack();
 
 		updateCharacterHealthBars();
@@ -221,11 +216,12 @@ $(".startButton").on("click", function() {
 
 			updateCharacterHealthBars();
 		}
-if (true) {}
+
 
 		if (userCharPick === "Cartman") {
 			cartmanNewHP = parseInt(cHP) - attackBack + "%";
 			cHP = document.getElementById("cartmanBar").style.width = cartmanNewHP;
+			attackBack = Math.floor(Math.random() * 6);
 
 			updateCharacterHealthBars();
 		}
@@ -233,6 +229,7 @@ if (true) {}
 		if (userCharPick === "Butters") {
 			buttersNewHP = parseInt(bHP) - attackBack + "%";
 			bHP = document.getElementById("buttersBar").style.width = buttersNewHP;
+			attackBack = Math.floor(Math.random() * 6);
 
 			updateCharacterHealthBars();
 		}
@@ -240,6 +237,7 @@ if (true) {}
 		if (userCharPick === "Tweek") {
 			tweekNewHP = parseInt(tHP) - attackBack + "%";
 			tHP = document.getElementById("tweekBar").style.width = tweekNewHP;
+			attackBack = Math.floor(Math.random() * 10);
 
 			updateCharacterHealthBars();
 		}
